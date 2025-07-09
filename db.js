@@ -8,3 +8,14 @@ const conn = db.createConnection({
     password: '',
     database: 'node_db'
 })
+
+
+conn.connect( err => {
+    if (err) {
+        console.log("Mysql connection failed");
+        
+    } else{
+        console.log("Connected to Mysql");
+        
+    }
+})
