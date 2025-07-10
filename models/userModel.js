@@ -1,12 +1,10 @@
 
-const express = require('express');
-const db = require('./db')
+const {DataTypes} = require('sequelize');
+const dbconn = require('../db')
 
 
-const app = express();
-
-
-app.post('/users', (req,res) => {
-    const {name, email} = req.body
-    const sql = 'INSERT INTO users (name, email) VALUES (?,?)'
+const Users = dbconn.define('users',{
+    fullname:{
+        
+    }
 })
