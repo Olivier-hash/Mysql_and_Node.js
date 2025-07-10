@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+const dotenv = process.dotenv.config()
 
 
 app.use('/users', (req,res)=>{
