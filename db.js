@@ -1,15 +1,5 @@
 const { Sequelize } = require('sequelize');
 
-// create connection with mysql2
-
-// const conn = db.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'node_db'
-// })
-
-
 // create connection with sequalize
 
 const dbconn = new Sequelize("node_db", "root","", {
@@ -27,6 +17,7 @@ const dbCheck = async () => {
         
     }
 }
+dbCheck();
 
-module.exports = dbonn;
+module.exports = dbconn;
 
