@@ -1,13 +1,13 @@
-const db = require('mysql2');
+const sequalize = require('sequalize');
 
-// create connection
+// create connection with mysql2
 
-const conn = db.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'node_db'
-})
+// const conn = db.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'node_db'
+// })
 
 
 conn.connect( err => {
