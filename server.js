@@ -9,9 +9,7 @@ const dbconn = require('./config/db')
 const userRoutes = require('./Routes/users')
 
 app.use(express.json());
-app.use('/users', (req,res)=>{
-
-});
+app.use('/users', userRoutes);
 
 const port = process.env.PORT
 
