@@ -1,5 +1,5 @@
 
-const {DataTypes, STRING} = require('sequelize');
+const {DataTypes} = require('sequelize');   // sequelize
 const dbconn = require('../db')
 
 
