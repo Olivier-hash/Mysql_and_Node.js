@@ -6,6 +6,11 @@ dotenv.config();
 
 const dbconn = require('./config/db')
 
+// // sync db to create `USers table`
+dbconn.sync().then(() => {
+  console.log('✅ Database synced');
+});
+
 const userRoutes = require('./Routes/users')
 
 app.use(express.json());

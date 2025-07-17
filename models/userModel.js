@@ -4,7 +4,7 @@ const dbconn = require('../config/db')
 
 
 const Users = dbconn.define('users',{
-    fullname:{
+    fullName:{
         type:DataTypes.STRING,
         allowNull:false,
         validate:{len:[5]}
@@ -21,4 +21,7 @@ const Users = dbconn.define('users',{
         allowNull:false,
         validate:{len:[8]}
     }
-})
+});
+
+
+module.exports = Users
