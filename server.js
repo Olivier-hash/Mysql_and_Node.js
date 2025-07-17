@@ -6,6 +6,8 @@ dotenv.config();
 
 const dbconn = require('./config/db')
 
+const userRoutes = require('./Routes/users')
+
 app.use('/users', (req,res)=>{
 
 });
