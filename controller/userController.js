@@ -9,6 +9,7 @@ exports.createUSer = async (req,res) => {
   try {
     const user = await userModel.createUSer({fullName,email,password})
   } catch (error) {
+    console.log('error ocurred', error);
     
   }
 }
