@@ -1,6 +1,6 @@
 
 const {DataTypes} = require('sequelize');   // sequelize
-const dbconn = require('../db')
+const dbconn = require('../config/db')
 
 
 const Users = dbconn.define('users',{

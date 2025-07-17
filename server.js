@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 
-const dbconn = require('./db')
+const dbconn = require('./config/db')
 
 app.use('/users', (req,res)=>{
 
