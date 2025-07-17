@@ -1,15 +1,12 @@
+const userModel = require('../models/userModel')
+const dbconn = require('../config/db')
 
-const userModel = require('../models/userModel');
 
 
-
-exports.CreateUSer = async (req, res) =>{
-    const {fullName, email, password} =req.body
-
+exports.createUSer = async (req,res) => {
   try {
-      const user = await userModel.create({fullName,email,password})
-      res.json({message:'user created sucessfully', user})
+    awa
   } catch (error) {
-      
+    
   }
 }
