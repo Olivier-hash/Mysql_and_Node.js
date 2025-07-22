@@ -32,6 +32,6 @@ exports.getUserById = async (req,res) => {
     if(!user) return res.status(404).json({message: "User not Found"});
     res.json({message:"user identified by Id",user});
   } catch (error) {
-    res.status(500).json({error: error.message});
+    res.status(500).json({error: "internal server Error"})
   }
 }
