@@ -1,3 +1,8 @@
+// sequlize is the ORM : object Relational Mapping tool for Node.js 
+// is a tool that allows you to interact with relational database like
+//{MYSQL, PostgreSQ, }
+
+
 const { Sequelize } = require('sequelize');
 
 // create connection with sequalize
