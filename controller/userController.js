@@ -52,7 +52,7 @@ exports.updateUser = async (req, res)=> {
 
 
 //Delete user
-exports.deleteUSer = async (re,res) => {
+exports.deleteUser = async (req,res) => {
   try {
     const user = await userModel.findByPk(req.params.id);
     if(!user) return res.status(404).json({message: "User not Found"})
