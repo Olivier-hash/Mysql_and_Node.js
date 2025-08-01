@@ -1,6 +1,7 @@
 //packages needed to be installed for Auntentification
 //npm i bcrypt jsonwebtoken 
-const bcrypt = require('')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const userModel = require('../models/userModel')
 const dbconn = require('../config/db')
@@ -66,4 +67,16 @@ exports.deleteUser = async (req,res) => {
   } catch (error) {
     res.status(500).json({error: error.message})
   }
+}
+
+
+
+//Registering users
+
+exports.register = async(req, res) =>{
+  const {fullName, email, password} = req.body;
+  const hashedpass  = await bcrypt.hash(password,10);
+  await userModel.create({fullName,email, password:hashedpass});
+  res.json({message: "user registered"})
+
 }
