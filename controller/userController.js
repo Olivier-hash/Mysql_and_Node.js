@@ -80,3 +80,11 @@ exports.register = async(req, res) =>{
   res.json({message: "user registered"})
 
 }
+
+// Login
+
+exports,login = async (req,res)=> {
+  const {email, password} = req.body
+  const user = await userModel.findOne({ where: email});
+  if (!user || !(await bcrypt.compare(password, user.password)))
+}
