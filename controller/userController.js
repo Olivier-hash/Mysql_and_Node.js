@@ -92,3 +92,11 @@ exports,login = async (req,res)=> {
   const token = jwt.sign( {id: user.id}, 'secret123');
   res.json({token});
 }
+
+
+// Protected profile
+
+exports.getProfile = async(req,res) =>{
+  const user = await userModel.findByPk(req.params.id)
+  res.json({user});
+}
