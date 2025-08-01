@@ -1,3 +1,7 @@
+//packages needed to be installed for Auntentification
+//npm i bcrypt jsonwebtoken 
+
+
 const userModel = require('../models/userModel')
 const dbconn = require('../config/db')
 
