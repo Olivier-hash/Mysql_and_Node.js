@@ -17,7 +17,6 @@ app.use(express.json());
 app.use('/users', userRoutes);
 
 const port = process.env.PORT
-
 app.listen(port, ()=> {
     console.log(`🚀 Server running at http://localhost:${port}`);
     
