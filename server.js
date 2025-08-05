@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
+const ejs = require('ejs')
 dotenv.config();
 
 
@@ -12,7 +13,7 @@ dbconn.sync().then(() => {
 });
 
 const userRoutes = require('./Routes/users')
-
+app.set('view engine', 'ejs')
 app.use(express.json());
 app.use('/users', userRoutes);
 
