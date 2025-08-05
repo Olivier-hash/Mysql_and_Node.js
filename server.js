@@ -13,7 +13,13 @@ dbconn.sync().then(() => {
 });
 
 const userRoutes = require('./Routes/users')
+
+// Ejs script
 app.set('view engine', 'ejs')
+app.get('/', (req,res)=>{
+  res.render('upload-form')
+})
+
 app.use(express.json());
 app.use('/users', userRoutes);
 
