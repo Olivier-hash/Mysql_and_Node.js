@@ -12,6 +12,8 @@ const storage = multer.diskStorage({
     }
 })
 
+// Task i have to create and export this function to main server
+
 const upload = multer({
     storage: storage,
     limits: {fileSize: 5 * 1024 * 1025}, // 5MB max

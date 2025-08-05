@@ -1,7 +1,6 @@
 
 const {createUser, getAllUsers, getUserById, updateUser, deleteUser, register, getProfile, login} = require('../controller/userController')
 const express = require('express')
-const uploads = require('../middlewares/upload');
 const upload = require('../middlewares/upload');
 
 
