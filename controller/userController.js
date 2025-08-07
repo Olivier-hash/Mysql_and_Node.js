@@ -97,6 +97,6 @@ exports.login = async (req,res)=> {
 // Protected profile
 
 exports.getProfile = async(req,res) =>{
-  const user = await userModel.findByPk(req.params.id)
+  const user = await userModel.findByPk(req.user.id)  // replace params for id to extract it form jwt
   res.json({user});
 }
