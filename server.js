@@ -13,12 +13,14 @@ dbconn.sync().then(() => {
 });
 
 const userRoutes = require('./Routes/users')
+const uploads = require('./middlewares/upload')
 
 // Ejs script
 app.set('view engine', 'ejs')
 
 app.use(express.json());
 app.use('/users', userRoutes);
+app.use('/upload', uploads)
 
 const port = process.env.PORT
 app.listen(port, ()=> {
